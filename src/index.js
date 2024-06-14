@@ -46,7 +46,6 @@ const sendMessage = async (req, resp, payload) => {
         });
         const JSONResponse = await res.json();
         console.log(JSONResponse, 'sent')
-        // resp.send(JSONResponse);
     } catch (err) {
         console.log(err.message);
         resp.status(500).send('Failed to fetch data');
@@ -59,12 +58,6 @@ const sendImageMessage = async (req, resp, formData) => {
             method: 'POST',
             body: formData
         });
-
-        // if (!res.ok) {
-        //     console.error(`HTTP error! Status: ${res.status}`);
-        //     resp.status(500).send('Failed to send image message');
-        //     return;
-        // }
 
         const jsonResponse = await res.json();
         console.log(jsonResponse, 'sent');
@@ -80,12 +73,6 @@ const sendVideoMessage = async (req, resp, formData) => {
             method: 'POST',
             body: formData
         });
-
-        // if (!res.ok) {
-        //     console.error(`HTTP error! Status: ${res.status}`);
-        //     resp.status(500).send('Failed to send video message');
-        //     return;
-        // }
 
         const jsonResponse = await res.json();
         console.log(jsonResponse, 'sent');
