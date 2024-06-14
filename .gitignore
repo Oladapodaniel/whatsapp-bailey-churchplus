@@ -4,7 +4,8 @@ node_modules
 #yarn.lock
 
 # APPLICATION
-#.env
+.env
+.env.example
 sessiondata
 
 # IDEs
